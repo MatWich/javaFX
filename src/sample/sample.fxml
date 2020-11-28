@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.sampleController">
+   <children>
+      <TableView fx:id="tableView" editable="true" layoutX="236.0" layoutY="10.0" prefHeight="200.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="nameColumn" minWidth="-1.0" onEditCommit="#changgeNameCellEvent" prefWidth="75.0" text="Name" />
+            <TableColumn fx:id="priceColumn" minWidth="-1.0" prefWidth="75.0" text="Price" />
+            <TableColumn fx:id="PYColumn" minWidth="-1.0" prefWidth="75.0" text="Prod year" />
+            <TableColumn fx:id="salonNameColumn" prefWidth="75.0" text="Salon name" />
+            <TableColumn fx:id="statusColumn" prefWidth="75.0" text="Dostepnosc" />
+         </columns>
+      </TableView>
+      <TableView fx:id="CStableView" layoutX="6.0" layoutY="10.0" prefHeight="200.0" prefWidth="228.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <columns>
+            <TableColumn fx:id="CSNameColumn" prefWidth="301.2000060081482" text="ShowRoom" />
+         </columns>
+      </TableView>
+      <HBox layoutX="235.0" layoutY="210.0" prefHeight="100.0" prefWidth="375.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#kupBtnPushed" text="Kup" />
+            <Button mnemonicParsing="false" onAction="#zarBtnPushed" text="Zarezerwuj" />
+            <VBox prefHeight="200.0" prefWidth="100.0" />
+         </children>
+      </HBox>
+      <VBox layoutX="12.0" layoutY="210.0" prefHeight="125.0" prefWidth="220.0" spacing="5.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#showCarsBtnPushed" text="Show Cars in this Showroom" />
+            <Label text="nazwa Szamochodu" />
+            <TextField fx:id="searchField" promptText="Name of car" />
+            <Button mnemonicParsing="false" onAction="#search" text="Szukaj" />
+         </children>
+      </VBox>
+      <VBox layoutX="12.0" layoutY="336.0" prefHeight="65.0" prefWidth="220.0">
+         <children>
+            <Button mnemonicParsing="false" prefHeight="26.0" prefWidth="192.0" text="Dodaj do koszyka" />
+         </children>
+      </VBox>
+      <Button layoutX="533.0" layoutY="360.0" mnemonicParsing="false" onAction="#changeSceneButtonPushed" text="Koszyk" />
+   </children>
+</AnchorPane>
